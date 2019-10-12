@@ -18,7 +18,7 @@ Firstly, take a look at the [docs](https://mcforge.readthedocs.io/en/1.13.x/gett
 1) Open vscode to the root of your repo
 1) Open a vscode terminal window and run `gradle build`
 
-### Code and That
+### Config Changes
 1) In `build.gradle` find the line that starts `group = `, and replace it with a domain you own in reverse, followed by package identifier e.g. `dev.mikemcmillan.modid`
 1) Comment out the line `apply plugin: 'eclipse'`
 
@@ -31,30 +31,9 @@ Tip: You can run `gradle tasks` to output all tasks available.  Such as `runserv
 1) `gradle runserver`  This will download a whole bunch of minecraft assets. ... this failed for me at the :runserver step.  This may or may not be needed.
 1) `gradle runclient` This appears to launch minecraft.  Swish.
 
-### Change the Mod Name
-Note that the ModId doesn't allow symbols!
-
-In `\build.gradle`
-1) change `args '--mod', 'examplemod'` to `args '--mod', 'mikesmod'`
-1) change `Specification-Title` to `"mikesmod"`
-1) change `group` to `group = 'dev.mikemcmillan.mikesmod'`
-1) change `archivesBaseName` to `archivesBaseName = 'mikesmod'`
-
-In `\src\main\resources\META-INF\mods.toml` 
-1) change `displayName=` to `displayName="Mikes Mod"`
-1) change `modId=` to `modId="mikesmod"`
-1) change `[[dependencies.examplemod]]` to `[[dependencies.mikesmod]]`.  This is in 2 places.
-1) change the multiline `description=` to `description="Mikes Hello World Mod"`
-1) change `displayURL=` to `displayURL="http://mikemcmillan.dev"`
-
-In `\src\main\java\com\example\examplemod\ExampleMod.java` 
-1) change the @Mod annotation from `@Mod("examplemod")` to `@Mod("mikesmod")` 
-
-In `\src\main\resources\pack.mcmeta`
-1) change `description` to `"mikesmod resources"`
-
-Open a terminal and run
-1) `gradle clean build runclient`
+### Start Coding the Mod
+Here's a great resource with examples: 
+https://github.com/TheGreyGhost/MinecraftByExample/tree/master/src/main/java/minecraftbyexample
 
 ### Commit to git
 1) Sign the `\run\eula.txt`
