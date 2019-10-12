@@ -1,0 +1,10 @@
+{
+    "homepage": "<homepage/download page for your mod>",
+    "<mcversion>": {
+      "1.0.0": "Initial version"
+    },
+    "promos": {
+      "1.14.4-latest": "1.0.0",
+      "1.14.4-recommended": "1.0.0"
+    }
+}
